@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./../bootstrap.css">
+        <link rel="stylesheet" href="Todo.css">
+        <title>TODO</title>
+        <style>
+            .title-input{
+                background-color: transparent;
+                border: none;
+                font-size: inherit;
+                outline: none;
+                color: #fafafa;
+            }
+        </style>
+
+    </head>
+
+    <body style="background-image: url('back.jpg');">
+        <h1 style="text-align: center;" onclick="console.log(this)">Todo</h1>
+
+        <div 
+        style="background-color:#f19372; 
+        position: fixed; 
+        top: 0; 
+        transition: all 0.3s ease;
+        width: 100%;
+        right: -100%;" 
+        id="alert">
+        Can not be empty!
+        <button id="close-alert">OK</button>
+        </div>
+
+        <form
+        style="display: flex; 
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;"
+        >
+        <input  
+        style="width: 30rem; background-color:#e8eaed;"
+        id="title" type="text" placeholder="Title" />
+        <textarea 
+        style="width: 30rem; background-color:#e8eaed"
+        id="desc" placeholder="Do Something" rows="10"></textarea>
+        <button id="submit" type="button" class="btn btn-primary">submit</button>
+
+        </form>
+    <hr/>
+
+    <ul style="color:#e8eaed" id="main">
+        <li>
+            <h3>Title</h3>
+            <p>Description</p>
+        </li>
+    </ul>
+        <script type="module" src="todo.js"></script>
+    </body>
+</html>
